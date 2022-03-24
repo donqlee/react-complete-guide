@@ -26,9 +26,14 @@ const expenses = [
         date: new Date(2021, 5, 12)
     }
 ]
+
+const addExpenseHandler = expense => {
+  console.log('In App.js');
+  console.log(expense);
+}
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAdddExpense={addExpenseHandler}/>
       <Expenses 
         items={expenses}
       />
